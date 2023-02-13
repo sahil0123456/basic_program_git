@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void reverseString(string s){
+	int x=0;
+	int y=s.size()-1;
+	while(x<=y){
+		swap(s[x++],s[y--]);
+	}
+	cout<<s<<endl;
+}
+
+void checkCharacter(char s){
+	if(s>='0' &&s<='9'){
+		cout<<"it is a digit"<<endl;
+	}
+	else if(s=='a'||s=='e'||s=='i'||s=='o'||s=='u'){
+		cout<<"it is a vowels";
+	}
+        else{
+		cout<<"It is a consonant";
+	}
+}
+int sumArray(int* a,int n){
+	int sum=0;
+	for(int i=0;i<n;i++){
+		sum+=a[i];
+	}
+	return sum;
+}
+int main(){
+      int n=5;
+      char ch='9';
+      string s="sahil";
+      reverseString(s);
+      checkCharacter(ch);
+      int arr[]={1,2,3,4,5};
+   cout<<"sum is: "<<sumArray(arr,n)<<endl;
+
+}
+
